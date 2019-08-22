@@ -7,7 +7,6 @@ public class MouseCamara : MonoBehaviour
     private float inputH;
     private  float inputV;
     private float speed;
-    private Quaternion comprovador;
     private Vector3 sig;
     private Vector3 act;
     private Quaternion final;
@@ -30,16 +29,9 @@ public class MouseCamara : MonoBehaviour
         
         inputH = Input.mousePosition.x;
         inputV = Input.mousePosition.y;
-        comprovador = Quaternion.Euler(-inputV, inputH, 0);
-        sig = new Vector3(comprovador.x, comprovador.y, 0);
-        final = comprovador;
-      
+        final = Quaternion.Euler(-inputV, inputH, 0);
         transform.localRotation = final;
 
     }
-    private void ConversorGrados()
-    {
-       act.y += inputH * speed;
-       act.x += inputV * speed;
-    }
+   
 }
