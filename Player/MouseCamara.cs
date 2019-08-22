@@ -6,15 +6,12 @@ public class MouseCamara : MonoBehaviour
 {
     private float inputH;
     private  float inputV;
-    private float speed;
-    private Vector3 sig;
-    private Vector3 act;
     private Quaternion final;
 
     void Awake()
     {
 
-        act = new Vector3(transform.rotation.x, transform.rotation.y, 0);
+        
 
     }
    
